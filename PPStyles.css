@@ -1,22 +1,135 @@
-footer{
-    margin-top: 25px;
+h1, p{
+  font-family:Arial, Helvetica, sans-serif;
 }
-.social {
-    padding-bottom: 15px;
-    padding-top: 5px;
-    font-size: 30px;
-    text-align: center;
-    text-decoration: none;
+header{
+    font-family: 'Archivo Black';
 }
-.social a {
-    font-size: 24px;
-    background: #757575;
-    width: 40px;
-    height: 40px;
-    line-height: 38px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 8px;
-    opacity: 0.75;
+.navbar{
+    display: flex;
+}
+.btn-link {
+  margin: 0;
+}
+.btn {
+  margin-bottom: calc(var(--gap-padding) / 2);
+  position: relative;
+  z-index: 5;
+  border: 0;
+  outline: 0;
+}
+.white{
+  color: white;
+}
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+  max-width: 100%;
+  height: 95vh; /* Full viewport height */
+  min-height: 500px; /* Set a minimum height in case the content is small */
+  position: relative; /* Allow positioning of the overlay inside the box */
+}
+
+.about-me-brief {
+  flex: 1;
+  padding-left: 30px;
+  align-self: center;
+}
+
+.large-hello{
+  font-size: xx-large;
+}
+
+.image-box {
+  flex: 1;
+  padding: 10px;
+  position: relative; /* Allow positioning of overlay inside the box */
+  align-items: flex-start; /* Align items to the top */
+  z-index: 1;
+}
+
+.pict-formal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0; /* Ensures it's below other content */
+}
+
+.frame-pict-deli img {
+  position: absolute;
+  top: 20px;
+  width: 50%; /* Set initial width for desktop */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-20%); /* Move image to center by 50% of its width */
+}
+
+.pict-formal {
+  position: absolute;
+  top: 20px; /* Adjust the overlay image position */
+  right: 100px; /* Adjust the left position for overlay image */
+  width: 80%; /* Adjust overlay size */
+  z-index: 0; /* Lower than .minat-sejarah */
+}
+
+.pict-formal img {
+  width: 100%;
+  height: auto;
+}
+
+.history-container {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally in column layout */
+  }
+
+  .about-me-brief {
+    padding: 10px;
+    text-align: center; /* Center-align text for mobile */
+  }
+
+  .image-box img {
+    max-width: 100%; /* Prevents image from exceeding its container */
+    min-width: 300px; /* Ensures a reasonable size even on small screens */
+    height: auto; /* Maintains aspect ratio */
+  }
+
+  .pict-formal {
+    right: 200px; /* Adjust the left position for overlay image */
+    width: 80%; /* Adjust overlay size */
+  }
+  
+  .pict-formal img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.minat-sejarah{
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1; /* Ensures it appears above .pict-formal */
+}
+.history-text{
+  align-self: center;
+}
+.pict-deli img{
+  width: 40%;
+  padding-left: 20%;
+}
+body{
+    background-color: #323A42;
+}
+.social-media-icons {
+    display: flex;
+    grid-column-gap: 20px;
+}
+.social-media-icons-individuals {
+    align-items: center;
 }
