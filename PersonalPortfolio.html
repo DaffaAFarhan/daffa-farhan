@@ -1,34 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daffa Farhan</title>
-  <link rel="stylesheet" href="PPStyles.css" />
-</head>
-<body>
-  <footer>
-    <!--<div class='footer-logo' style='text-align: center;' width='200'>
-      <img alt='Media Serumpun' class='logo light-mode' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaMssJ4qmlwkocHvl2fQH6bqpJ6f2Bk3LyxQjsKi0FzYdrk5Io0byMW5jO105g2YtP9uXtjgPS9p2wkjWPWCKDJyMk46DtUIZ_j1SLhSaIQImkk8U1knizv7xC7l86Zh1NxWN3kGAzPuCxtlIw-A9rcK8Wgpqpgd52jH2CQGYuCViqaObquqeqlUDjSLc/s200/20220611_085556.png'/>
-      <img alt='Media Serumpun' class='logo dark-mode' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMkMhQ8KRNDM1Ql2DhSYCM1xXEFIsxDFUuIVR2u33suzx8eMrqnDkorL3CQ2SQLHgIsl50w1iR6rIfhz4QUhb-2LyrQ0iqM7XzWuiJLMQKaBSQH76GNlWnof1y9O7N-pURBg-ZBaawPCLPYxMgSmn90ve2RPWjY5Qa4ahyGHHW2Aeh4T5MSvMbMqB_fBFm/w200-h66/20220611_085529.png'/>
-    </div>-->
-    <div class='social'>
-      <a href='https://www.instagram.com/dfrhxnn._/'><img alt='instagram page button' src='https://platform-cdn.sharethis.com/img/instagram.svg'/></a>
-      <a href='https://www.linkedin.com/in/daffa-ahmad-farhan-a77468314/'><img alt='linkedin page button' src='https://platform-cdn.sharethis.com/img/linkedin.svg'/></a>
-    </div>
+h1, p{
+  font-family:Arial, Helvetica, sans-serif;
+}
+header{
+    font-family: 'Archivo Black';
+}
+.navbar{
+    display: flex;
+}
+.btn-link {
+  margin: 0;
+}
+.btn {
+  margin-bottom: calc(var(--gap-padding) / 2);
+  position: relative;
+  z-index: 5;
+  border: 0;
+  outline: 0;
+}
+.white{
+  color: white;
+}
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+  max-width: 100%;
+  height: 95vh; /* Full viewport height */
+  min-height: 500px; /* Set a minimum height in case the content is small */
+  position: relative; /* Allow positioning of the overlay inside the box */
+}
 
-    <ul class='list'>
-      <li>
-        <a href='https://serumpunmedia.blogspot.com/'>BERANDA</a>
-      </li>
-      <li>
-        <a href='https://serumpunmedia.blogspot.com/p/kebijakan-privasi.html'>KEBIJAKAN PRIVASI</a>
-      </li>
-      <li>
-        <a href='https://serumpunmedia.blogspot.com/p/tentang-kami.html'>TENTANG KAMI</a>
-      </li>
-    </ul>
-    <p class='copyright'> &#169;2024 Daffa Ahmad Farhan</p>
-  </footer>
-</body>
-</html>
+.about-me-brief {
+  flex: 1;
+  padding-left: 30px;
+  align-self: center;
+}
+
+.large-hello{
+  font-size: xx-large;
+}
+
+.image-box {
+  flex: 1;
+  padding: 10px;
+  position: relative; /* Allow positioning of overlay inside the box */
+  align-items: flex-start; /* Align items to the top */
+  z-index: 1;
+}
+
+.pict-formal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0; /* Ensures it's below other content */
+}
+
+.frame-pict-deli img {
+  position: absolute;
+  top: 20px;
+  width: 50%; /* Set initial width for desktop */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-20%); /* Move image to center by 50% of its width */
+}
+
+.pict-formal {
+  position: absolute;
+  top: 20px; /* Adjust the overlay image position */
+  right: 100px; /* Adjust the left position for overlay image */
+  width: 80%; /* Adjust overlay size */
+  z-index: 0; /* Lower than .minat-sejarah */
+}
+
+.pict-formal img {
+  width: 100%;
+  height: auto;
+}
+
+.history-container {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally in column layout */
+  }
+
+  .about-me-brief {
+    padding: 10px;
+    text-align: center; /* Center-align text for mobile */
+  }
+
+  .image-box img {
+    max-width: 100%; /* Prevents image from exceeding its container */
+    min-width: 300px; /* Ensures a reasonable size even on small screens */
+    height: auto; /* Maintains aspect ratio */
+  }
+
+  .pict-formal {
+    right: 200px; /* Adjust the left position for overlay image */
+    width: 80%; /* Adjust overlay size */
+  }
+  
+  .pict-formal img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.minat-sejarah{
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1; /* Ensures it appears above .pict-formal */
+}
+.history-text{
+  align-self: center;
+}
+.pict-deli img{
+  width: 40%;
+  padding-left: 20%;
+}
+body{
+    background-color: #323A42;
+}
+.social-media-icons {
+    display: flex;
+    grid-column-gap: 20px;
+}
+.social-media-icons-individuals {
+    align-items: center;
+}
