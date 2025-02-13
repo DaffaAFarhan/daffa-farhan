@@ -78,39 +78,7 @@ header{
   height: auto;
 }
 
-.history-container {
-  display: flex;
-}
-
-@media (max-width: 768px) {
-  .main-container {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally in column layout */
-  }
-
-  .about-me-brief {
-    padding: 10px;
-    text-align: center; /* Center-align text for mobile */
-  }
-
-  .image-box img {
-    max-width: 100%; /* Prevents image from exceeding its container */
-    min-width: 300px; /* Ensures a reasonable size even on small screens */
-    height: auto; /* Maintains aspect ratio */
-  }
-
-  .pict-formal {
-    right: 200px; /* Adjust the left position for overlay image */
-    width: 80%; /* Adjust overlay size */
-  }
-  
-  .pict-formal img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.minat-sejarah {
+.sejarah-container {
   width: 100vw; /* Full width */
   min-height: 110vh; /* At least full viewport height */
   background: white url('img/songket-background.png') center/cover no-repeat;
@@ -167,4 +135,71 @@ body{
 }
 .social-media-icons-individuals {
     align-items: center;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally in column layout */
+  }
+
+  .about-me-brief {
+    padding: 10px;
+    text-align: center; /* Center-align text for mobile */
+  }
+
+  .image-box img {
+    max-width: 100%; /* Prevents image from exceeding its container */
+    min-width: 300px; /* Ensures a reasonable size even on small screens */
+    height: auto; /* Maintains aspect ratio */
+  }
+
+  .pict-formal {
+    right: 200px; /* Adjust the left position for overlay image */
+    width: 80%; /* Adjust overlay size */
+  }
+  
+  .pict-formal img {
+    width: 100%;
+    height: auto;
+  }
+
+  .sejarah-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: flex-start; /* Start from top */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add space */
+  }
+
+  .history-text {
+    position: absolute;
+    left: auto;
+    padding-right: 0;
+    max-width: 90%;
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    top: 5%;
+    text-align: center;
+    z-index: 4; /* Keep it on top */
+  }
+
+  .pict-deli {
+    position: absolute; /* Ensure it stays relative to .sejarah-container */
+    bottom: 0; /* Keep at the bottom */
+    left: 50%; /* Move to the center */
+    transform: translateX(-50%); /* Center it horizontally */
+    max-height: 100vh; /* Adjust size for mobile */
+    z-index: 2; /* Ensure above buildings */
+  }
+
+  .istana-maimun,
+  .istano-basa {
+    position: absolute;
+    bottom: 0;
+    max-width: 60%; /* Reduce size */
+    z-index: 1; /* Ensure behind person */
+    opacity: 0.5;
+  }
 }
